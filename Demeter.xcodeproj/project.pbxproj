@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142A21C627EAA3DC00D7FA1F /* SecondOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A21C527EAA3DC00D7FA1F /* SecondOnboardingView.swift */; };
+		142A21C827EAA4DD00D7FA1F /* ThirdOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A21C727EAA4DD00D7FA1F /* ThirdOnboardingView.swift */; };
+		1451B77D27DAD69500D908E6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1451B77C27DAD69500D908E6 /* OnboardingView.swift */; };
+		1451B77F27DAD89000D908E6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1451B77E27DAD89000D908E6 /* HomeView.swift */; };
+		1451B78527DADAF900D908E6 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1451B78427DADAF900D908E6 /* SplashScreenView.swift */; };
 		C9E15D7B27D6BD67002E90D7 /* DemeterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E15D7A27D6BD67002E90D7 /* DemeterApp.swift */; };
 		C9E15D7D27D6BD67002E90D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E15D7C27D6BD67002E90D7 /* ContentView.swift */; };
 		C9E15D7F27D6BD68002E90D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9E15D7E27D6BD68002E90D7 /* Assets.xcassets */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		142A21C527EAA3DC00D7FA1F /* SecondOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOnboardingView.swift; sourceTree = "<group>"; };
+		142A21C727EAA4DD00D7FA1F /* ThirdOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdOnboardingView.swift; sourceTree = "<group>"; };
+		1451B77C27DAD69500D908E6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		1451B77E27DAD89000D908E6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1451B78427DADAF900D908E6 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		C9E15D7727D6BD67002E90D7 /* Demeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E15D7A27D6BD67002E90D7 /* DemeterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemeterApp.swift; sourceTree = "<group>"; };
 		C9E15D7C27D6BD67002E90D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +46,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1451B77A27DAD5E100D908E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1451B77B27DAD5FF00D908E6 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C9E15D7C27D6BD67002E90D7 /* ContentView.swift */,
+				C9E15D8927D6C42D002E90D7 /* LoginView.swift */,
+				1451B77C27DAD69500D908E6 /* OnboardingView.swift */,
+				1451B77E27DAD89000D908E6 /* HomeView.swift */,
+				1451B78427DADAF900D908E6 /* SplashScreenView.swift */,
+				142A21C527EAA3DC00D7FA1F /* SecondOnboardingView.swift */,
+				142A21C727EAA4DD00D7FA1F /* ThirdOnboardingView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		C9E15D6E27D6BD67002E90D7 = {
 			isa = PBXGroup;
 			children = (
@@ -55,10 +86,9 @@
 		C9E15D7927D6BD67002E90D7 /* Demeter */ = {
 			isa = PBXGroup;
 			children = (
-				C9E15D8827D6C3AB002E90D7 /* View */,
+				1451B77B27DAD5FF00D908E6 /* Screens */,
+				1451B77A27DAD5E100D908E6 /* Views */,
 				C9E15D7A27D6BD67002E90D7 /* DemeterApp.swift */,
-				C9E15D7C27D6BD67002E90D7 /* ContentView.swift */,
-				C9E15D8927D6C42D002E90D7 /* LoginView.swift */,
 				C9E15D7E27D6BD68002E90D7 /* Assets.xcassets */,
 				C9E15D8027D6BD68002E90D7 /* Preview Content */,
 				C9E15D8B27D6C615002E90D7 /* ImagePicker.swift */,
@@ -72,13 +102,6 @@
 				C9E15D8127D6BD68002E90D7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		C9E15D8827D6C3AB002E90D7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,10 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1451B78527DADAF900D908E6 /* SplashScreenView.swift in Sources */,
 				C9E15D8A27D6C42D002E90D7 /* LoginView.swift in Sources */,
 				C9E15D8C27D6C615002E90D7 /* ImagePicker.swift in Sources */,
 				C9E15D7D27D6BD67002E90D7 /* ContentView.swift in Sources */,
+				1451B77F27DAD89000D908E6 /* HomeView.swift in Sources */,
+				1451B77D27DAD69500D908E6 /* OnboardingView.swift in Sources */,
+				142A21C827EAA4DD00D7FA1F /* ThirdOnboardingView.swift in Sources */,
 				C9E15D7B27D6BD67002E90D7 /* DemeterApp.swift in Sources */,
+				142A21C627EAA3DC00D7FA1F /* SecondOnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

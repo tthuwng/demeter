@@ -13,6 +13,8 @@ struct LoginView: View {
     @State var email = ""
     @State var password = ""
     
+    @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -70,6 +72,14 @@ struct LoginView: View {
     private func handleAction() {
         if isLoginMode {
             print("Should log into Firebase with existing credentials")
+            
+            //Show onboarding view for once else show Home View
+            if isOnboardingViewActive {
+                OnboardingView()
+            }else{
+                HomeView()
+            }
+            
         } else {
             print("Register a new account inside of Firebase Auth and then store image in Storage somehow....")
         }

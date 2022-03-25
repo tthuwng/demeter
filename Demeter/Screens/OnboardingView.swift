@@ -14,6 +14,24 @@ struct OnboardingView: View {
         ZStack {
             Color(#colorLiteral(red: 0.8842360973358154, green: 0.9916666746139526, blue: 0.9400999546051025, alpha: 1)).ignoresSafeArea()
             
+            //Ellipse 1
+            Ellipse()
+                .fill(Color(#colorLiteral(red: 0.7921568751335144, green: 0.9529411792755127, blue: 0.8784313797950745, alpha: 1)))
+                .frame(width: 51, height: 49).offset(x:-170,y:-420)
+            
+            
+            //Ellipse 2
+            Ellipse()
+                .fill(Color(#colorLiteral(red: 0.7921568751335144, green: 0.9529411792755127, blue: 0.8784313797950745, alpha: 1)))
+                .frame(width: 51, height: 49).offset(x:-140,y:380)
+            
+            //Ellipse 3
+            Ellipse()
+                .fill(Color(#colorLiteral(red: 0.7911632061004639, green: 0.9541666507720947, blue: 0.8784864544868469, alpha: 1)))
+            .frame(width: 228, height: 219)
+            .offset(x:170,y:-420)
+            
+            
             VStack() {
                 Image("logo_green").resizable().frame(width: 50, height: 50, alignment: .center)
                 
@@ -30,7 +48,6 @@ struct OnboardingView: View {
                 
                 Image("Saly-10").resizable().frame(width: 316, height: 324, alignment: .center).offset(x: 0, y: -60)
                 
-                //Easily connect with trader...
                 Text("Easily connect with traders to earn more income and reduce food waste!").font(.system(size: 15, weight: .medium)).opacity(0.7).padding()
                 
                 
@@ -80,6 +97,7 @@ struct OnboardingView: View {
             }
             
             
+       
             
         }
     }

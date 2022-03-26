@@ -12,7 +12,7 @@ struct ContentView: View {
         ZStack{
             
             //Show Login View
-            LoginView()
+            HomeView()
         }
     }
 }

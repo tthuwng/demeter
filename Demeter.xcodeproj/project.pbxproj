@@ -12,12 +12,20 @@
 		1451B77D27DAD69500D908E6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1451B77C27DAD69500D908E6 /* OnboardingView.swift */; };
 		1451B77F27DAD89000D908E6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1451B77E27DAD89000D908E6 /* HomeView.swift */; };
 		1451B78527DADAF900D908E6 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1451B78427DADAF900D908E6 /* SplashScreenView.swift */; };
+		14BA675727EF93EB008F86EB /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA675627EF93EB008F86EB /* ItemView.swift */; };
+		14BA675927EF9D85008F86EB /* CroptypeScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA675827EF9D85008F86EB /* CroptypeScanView.swift */; };
+		14BA675B27EFA000008F86EB /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA675A27EFA000008F86EB /* ScanView.swift */; };
+		14BA676227EFA20E008F86EB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA676127EFA20E008F86EB /* ViewModel.swift */; };
+		14BA676427EFA228008F86EB /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA676327EFA228008F86EB /* Picker.swift */; };
+		14BA676627EFA25E008F86EB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA676527EFA25E008F86EB /* ImagePicker.swift */; };
+		14BA676827EFA286008F86EB /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA676727EFA286008F86EB /* ZoomableScrollView.swift */; };
+		14BA676A27EFA2CB008F86EB /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA676927EFA2CB008F86EB /* FileManager+Extension.swift */; };
+		14BA676D27EFB1BF008F86EB /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA676C27EFB1BF008F86EB /* ResultsView.swift */; };
 		C9E15D7B27D6BD67002E90D7 /* DemeterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E15D7A27D6BD67002E90D7 /* DemeterApp.swift */; };
 		C9E15D7D27D6BD67002E90D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E15D7C27D6BD67002E90D7 /* ContentView.swift */; };
 		C9E15D7F27D6BD68002E90D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9E15D7E27D6BD68002E90D7 /* Assets.xcassets */; };
 		C9E15D8227D6BD68002E90D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9E15D8127D6BD68002E90D7 /* Preview Assets.xcassets */; };
 		C9E15D8A27D6C42D002E90D7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E15D8927D6C42D002E90D7 /* LoginView.swift */; };
-		C9E15D8C27D6C615002E90D7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E15D8B27D6C615002E90D7 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,13 +34,22 @@
 		1451B77C27DAD69500D908E6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		1451B77E27DAD89000D908E6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1451B78427DADAF900D908E6 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		14BA675627EF93EB008F86EB /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		14BA675827EF9D85008F86EB /* CroptypeScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroptypeScanView.swift; sourceTree = "<group>"; };
+		14BA675A27EFA000008F86EB /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		14BA676127EFA20E008F86EB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		14BA676327EFA228008F86EB /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
+		14BA676527EFA25E008F86EB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		14BA676727EFA286008F86EB /* ZoomableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
+		14BA676927EFA2CB008F86EB /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
+		14BA676B27EFA9E6008F86EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		14BA676C27EFB1BF008F86EB /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		C9E15D7727D6BD67002E90D7 /* Demeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E15D7A27D6BD67002E90D7 /* DemeterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemeterApp.swift; sourceTree = "<group>"; };
 		C9E15D7C27D6BD67002E90D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C9E15D7E27D6BD68002E90D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9E15D8127D6BD68002E90D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C9E15D8927D6C42D002E90D7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		C9E15D8B27D6C615002E90D7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,13 +63,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1451B77A27DAD5E100D908E6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		1451B77B27DAD5FF00D908E6 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,8 +73,45 @@
 				1451B78427DADAF900D908E6 /* SplashScreenView.swift */,
 				142A21C527EAA3DC00D7FA1F /* SecondOnboardingView.swift */,
 				142A21C727EAA4DD00D7FA1F /* ThirdOnboardingView.swift */,
+				14BA675627EF93EB008F86EB /* ItemView.swift */,
+				14BA675827EF9D85008F86EB /* CroptypeScanView.swift */,
+				14BA675A27EFA000008F86EB /* ScanView.swift */,
+				14BA676C27EFB1BF008F86EB /* ResultsView.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		14BA675D27EFA198008F86EB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				14BA676127EFA20E008F86EB /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		14BA675E27EFA1BF008F86EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14BA676327EFA228008F86EB /* Picker.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		14BA675F27EFA1C6008F86EB /* UIViewRepresentables */ = {
+			isa = PBXGroup;
+			children = (
+				14BA676527EFA25E008F86EB /* ImagePicker.swift */,
+				14BA676727EFA286008F86EB /* ZoomableScrollView.swift */,
+			);
+			path = UIViewRepresentables;
+			sourceTree = "<group>";
+		};
+		14BA676027EFA1D9008F86EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				14BA676927EFA2CB008F86EB /* FileManager+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C9E15D6E27D6BD67002E90D7 = {
@@ -86,12 +133,15 @@
 		C9E15D7927D6BD67002E90D7 /* Demeter */ = {
 			isa = PBXGroup;
 			children = (
+				14BA676B27EFA9E6008F86EB /* Info.plist */,
+				14BA676027EFA1D9008F86EB /* Extensions */,
+				14BA675F27EFA1C6008F86EB /* UIViewRepresentables */,
+				14BA675E27EFA1BF008F86EB /* Models */,
+				14BA675D27EFA198008F86EB /* ViewModels */,
 				1451B77B27DAD5FF00D908E6 /* Screens */,
-				1451B77A27DAD5E100D908E6 /* Views */,
 				C9E15D7A27D6BD67002E90D7 /* DemeterApp.swift */,
 				C9E15D7E27D6BD68002E90D7 /* Assets.xcassets */,
 				C9E15D8027D6BD68002E90D7 /* Preview Content */,
-				C9E15D8B27D6C615002E90D7 /* ImagePicker.swift */,
 			);
 			path = Demeter;
 			sourceTree = "<group>";
@@ -176,12 +226,20 @@
 			files = (
 				1451B78527DADAF900D908E6 /* SplashScreenView.swift in Sources */,
 				C9E15D8A27D6C42D002E90D7 /* LoginView.swift in Sources */,
-				C9E15D8C27D6C615002E90D7 /* ImagePicker.swift in Sources */,
+				14BA675727EF93EB008F86EB /* ItemView.swift in Sources */,
+				14BA675927EF9D85008F86EB /* CroptypeScanView.swift in Sources */,
+				14BA675B27EFA000008F86EB /* ScanView.swift in Sources */,
+				14BA676827EFA286008F86EB /* ZoomableScrollView.swift in Sources */,
+				14BA676227EFA20E008F86EB /* ViewModel.swift in Sources */,
 				C9E15D7D27D6BD67002E90D7 /* ContentView.swift in Sources */,
 				1451B77F27DAD89000D908E6 /* HomeView.swift in Sources */,
+				14BA676427EFA228008F86EB /* Picker.swift in Sources */,
+				14BA676A27EFA2CB008F86EB /* FileManager+Extension.swift in Sources */,
 				1451B77D27DAD69500D908E6 /* OnboardingView.swift in Sources */,
 				142A21C827EAA4DD00D7FA1F /* ThirdOnboardingView.swift in Sources */,
+				14BA676627EFA25E008F86EB /* ImagePicker.swift in Sources */,
 				C9E15D7B27D6BD67002E90D7 /* DemeterApp.swift in Sources */,
+				14BA676D27EFB1BF008F86EB /* ResultsView.swift in Sources */,
 				142A21C627EAA3DC00D7FA1F /* SecondOnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +374,8 @@
 				DEVELOPMENT_TEAM = 7A2WQNQZNP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Demeter/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Demeter would like to access your camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -345,6 +405,8 @@
 				DEVELOPMENT_TEAM = 7A2WQNQZNP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Demeter/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Demeter would like to access your camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

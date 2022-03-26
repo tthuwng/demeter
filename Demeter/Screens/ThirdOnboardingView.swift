@@ -22,8 +22,8 @@ struct ThirdOnboardingView: View {
             //Ellipse 2
             Ellipse()
                 .fill(Color(#colorLiteral(red: 0.7911632061004639, green: 0.9541666507720947, blue: 0.8784864544868469, alpha: 1)))
-            .frame(width: 228, height: 219)
-            .offset(x:170,y:-420)
+                .frame(width: 228, height: 219)
+                .offset(x:170,y:-420)
             
             //Ellipse 3
             Ellipse()
@@ -66,45 +66,61 @@ struct ThirdOnboardingView: View {
                 
                 
                 HStack(spacing: 40){
-                   
-                    //Ellipse 1
-                    Circle()
-                        .fill(Color(#colorLiteral(red: 0.9058823585510254, green: 0.8745098114013672, blue: 0.7568627595901489, alpha: 1)))
-                        .frame(width: 14, height: 14)
                     
-                    //Ellipse 2
-                    Circle()
-                        .fill(Color(#colorLiteral(red: 0.9058823585510254, green: 0.8745098114013672, blue: 0.7568627595901489, alpha: 1)))
-                    .frame(width: 14, height: 14)
+                    Button {
+                        //action
+                    } label: {
+                        //Ellipse 1
+                        Circle()
+                            .fill(Color(#colorLiteral(red: 0.9058823585510254, green: 0.8745098114013672, blue: 0.7568627595901489, alpha: 1)))
+                            .frame(width: 14, height: 14)
+                    }
                     
-                    //Ellipse 3
-                    Circle()
-                        .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
-                    .frame(width: 14, height: 14)
+                    Button {
+                        //action
+                    } label: {
+                        //Ellipse 2
+                        Circle()
+                            .fill(Color(#colorLiteral(red: 0.9058823585510254, green: 0.8745098114013672, blue: 0.7568627595901489, alpha: 1)))
+                            .frame(width: 14, height: 14)
+                    }
                     
-                   
+                    Button {
+                        //action
+                    } label: {
+                        //Ellipse 3
+                        Circle()
+                            .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
+                            .frame(width: 14, height: 14)
+                    }
+                    
+                    
                 }
                 
                 Spacer()
                 
                 HStack {
                     Spacer()
-
-                    ZStack{
-                        //Rectangle 8
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352940797805786, blue: 0.3803921341896057, alpha: 0.33000001311302185)))
-                            .frame(width: 89, height: 72)
-                        
-                        //Rectangle 8
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
-                            .frame(width: 71, height: 55).offset()
-                        
-                        Image(systemName: "arrow.right").font(.system(size: 30.0,weight: .bold)).foregroundColor(.white)
-
-                        
-                    }.padding(.trailing,20)
+                    
+                    Button {
+                        //action
+                    } label: {
+                        ZStack{
+                            //Rectangle 8
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352940797805786, blue: 0.3803921341896057, alpha: 0.33000001311302185)))
+                                .frame(width: 89, height: 72)
+                            
+                            //Rectangle 8
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
+                                .frame(width: 71, height: 55).offset()
+                            
+                            Image(systemName: "arrow.right").font(.system(size: 30.0,weight: .bold)).foregroundColor(.white)
+                            
+                            
+                        }.padding(.trailing,40)
+                    }
                 }
                 
                 Spacer()
@@ -112,7 +128,7 @@ struct ThirdOnboardingView: View {
                 
                 
             }
-        
+            
             
         }
     }

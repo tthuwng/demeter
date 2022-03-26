@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct DemeterApp: App {
+    @StateObject var vm = ViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(vm)
         }
     }
 }

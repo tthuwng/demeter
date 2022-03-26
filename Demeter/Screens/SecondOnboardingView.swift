@@ -53,27 +53,38 @@ struct SecondOnboardingView: View {
                 Image("Other").resizable().frame(width: 315, height: 254, alignment: .center).offset(x: 0, y: 20)
                 
                 Spacer()
-
+                
                 Text("Detect crop disease early and find solutions to it with the help of A.I !").font(.system(size: 15, weight: .medium)).opacity(0.7).padding()
                 
                 
                 HStack(spacing: 40){
                     
+                    Button {
+                        //action
+                    } label: {
+                        //Ellipse 1
+                        Circle()
+                            .fill(Color(#colorLiteral(red: 0.9058823585510254, green: 0.8745098114013672, blue: 0.7568627595901489, alpha: 1)))
+                            .frame(width: 14, height: 14)
+                    }
                     
-                    //Ellipse 1
-                    Circle()
-                        .fill(Color(#colorLiteral(red: 0.9058823585510254, green: 0.8745098114013672, blue: 0.7568627595901489, alpha: 1)))
-                        .frame(width: 14, height: 14)
+                    Button {
+                        //action
+                    } label: {
+                        //Ellipse 2
+                        Circle()
+                            .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
+                            .frame(width: 14, height: 14)
+                    }
                     
-                    //Ellipse 2
-                    Circle()
-                        .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
-                        .frame(width: 14, height: 14)
-                    
-                    //Ellipse 3
-                    Circle()
-                        .fill(Color(#colorLiteral(red: 0.9058823585510254, green: 0.8745098114013672, blue: 0.7568627595901489, alpha: 1)))
-                        .frame(width: 14, height: 14)
+                    Button {
+                        //action
+                    } label: {
+                        //Ellipse 3
+                        Circle()
+                            .fill(Color(#colorLiteral(red: 0.9058823585510254, green: 0.8745098114013672, blue: 0.7568627595901489, alpha: 1)))
+                            .frame(width: 14, height: 14)
+                    }
                 }
                 
                 Spacer()
@@ -81,21 +92,25 @@ struct SecondOnboardingView: View {
                 HStack {
                     Spacer()
                     
-                    ZStack{
-                        //Rectangle 8
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352940797805786, blue: 0.3803921341896057, alpha: 0.33000001311302185)))
-                            .frame(width: 89, height: 72)
-                        
-                        //Rectangle 8
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
-                            .frame(width: 71, height: 55).offset()
-                        
-                        Image(systemName: "arrow.right").font(.system(size: 30.0,weight: .bold)).foregroundColor(.white)
-                        
-                        
-                    }.padding(.trailing,20)
+                    Button {
+                        //action
+                    } label: {
+                        ZStack{
+                            //Rectangle 8
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352940797805786, blue: 0.3803921341896057, alpha: 0.33000001311302185)))
+                                .frame(width: 89, height: 72)
+                            
+                            //Rectangle 8
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
+                                .frame(width: 71, height: 55).offset()
+                            
+                            Image(systemName: "arrow.right").font(.system(size: 30.0,weight: .bold)).foregroundColor(.white)
+                            
+                            
+                        }.padding(.trailing,20)
+                    }
                 }
                 
                 Spacer()

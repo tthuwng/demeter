@@ -29,6 +29,7 @@
 		14D1EAED27F1026C00735E46 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D1EAEC27F1026C00735E46 /* CartView.swift */; };
 		14D1EAEF27F10FFD00735E46 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D1EAEE27F10FFD00735E46 /* CheckoutView.swift */; };
 		14D1EAF127F1193500735E46 /* payment.gif in Resources */ = {isa = PBXBuildFile; fileRef = 14D1EAF027F1193500735E46 /* payment.gif */; };
+		14D1EAF327F1258300735E46 /* address.gif in Resources */ = {isa = PBXBuildFile; fileRef = 14D1EAF227F1258300735E46 /* address.gif */; };
 		C9E15D7B27D6BD67002E90D7 /* DemeterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E15D7A27D6BD67002E90D7 /* DemeterApp.swift */; };
 		C9E15D7D27D6BD67002E90D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E15D7C27D6BD67002E90D7 /* ContentView.swift */; };
 		C9E15D7F27D6BD68002E90D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9E15D7E27D6BD68002E90D7 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		14D1EAEC27F1026C00735E46 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		14D1EAEE27F10FFD00735E46 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		14D1EAF027F1193500735E46 /* payment.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = payment.gif; sourceTree = "<group>"; };
+		14D1EAF227F1258300735E46 /* address.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = address.gif; sourceTree = "<group>"; };
 		C9E15D7727D6BD67002E90D7 /* Demeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E15D7A27D6BD67002E90D7 /* DemeterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemeterApp.swift; sourceTree = "<group>"; };
 		C9E15D7C27D6BD67002E90D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		146347E227F01C8400DE9D7A /* Gif */ = {
 			isa = PBXGroup;
 			children = (
+				14D1EAF227F1258300735E46 /* address.gif */,
 				14D1EAF027F1193500735E46 /* payment.gif */,
 				14D1EAEA27F0F6CF00735E46 /* done.gif */,
 				14D1EAE227F0E94200735E46 /* checked.gif */,
@@ -244,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D1EAF327F1258300735E46 /* address.gif in Resources */,
 				146347F227F02A5400DE9D7A /* scanning.gif in Resources */,
 				C9E15D8227D6BD68002E90D7 /* Preview Assets.xcassets in Resources */,
 				14D1EAEB27F0F6CF00735E46 /* done.gif in Resources */,

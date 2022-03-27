@@ -11,10 +11,10 @@ struct CheckoutView: View {
     
     @State private var showPopUp = false
     @State private var showProgress = false
+    
+    @State private var showAddress = false
 
-    @State private var scale = 0.0
-    
-    
+
     
     var body: some View {
         ZStack{
@@ -97,9 +97,10 @@ struct CheckoutView: View {
                     HStack {
                         VStack(spacing: 40){
                             
-                            Image(systemName: "circle").font(.system(size: 20.0,weight: .bold)).foregroundColor(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)))
                             
-                            Image(systemName: "circle.inset.filled").font(.system(size: 20.0,weight: .bold)).foregroundColor(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)))
+                            Image(systemName:  "circle.inset.filled").font(.system(size: 20.0,weight: .bold)).foregroundColor(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)))
+                            
+                            Image(systemName:  "circle").font(.system(size: 20.0,weight: .bold)).foregroundColor(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)))
                             
                             
                             
@@ -110,17 +111,16 @@ struct CheckoutView: View {
                             
                             
                             Button {
-                                //action
                             } label: {
                                 HStack {
                                     ZStack{
                                         RoundedRectangle(cornerRadius: 20)
-                                            .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 0.5)))
+                                            .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
                                             .frame(width: 50, height: 50)
-                                        Image(systemName: "creditcard.and.123").font(.system(size: 20.0,weight: .bold)).foregroundColor(.white)
+                                        Image("google_pay").resizable().frame(width: 23, height: 23, alignment: .center).offset(x: -2)
                                     }
                                 }
-                                Text("Card").font(.system(size: 15, weight: .medium)).foregroundColor(Color.black).opacity(0.6)
+                                Text("Google Pay").font(.system(size: 15, weight: .medium)).foregroundColor(Color.black).opacity(0.8)
                                 
                             }
                             
@@ -133,14 +133,14 @@ struct CheckoutView: View {
                                 HStack {
                                     ZStack{
                                         RoundedRectangle(cornerRadius: 20)
-                                            .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
+                                            .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 0.5)))
                                             .frame(width: 50, height: 50)
-                                        Image(systemName: "arrow.left").font(.system(size: 20.0,weight: .bold)).foregroundColor(.white)
+                                        Image(systemName: "creditcard.and.123").font(.system(size: 20.0,weight: .bold)).foregroundColor(.white)
                                         
                                         
                                     }
                                 }
-                                Text("Google Pay").font(.system(size: 15, weight: .medium)).foregroundColor(Color.black).opacity(0.8)
+                                Text("Card").font(.system(size: 15, weight: .medium)).foregroundColor(Color.black).opacity(0.6)
                                 
                             }
                         }
@@ -158,19 +158,36 @@ struct CheckoutView: View {
                     
                     HStack {
                         VStack(spacing: 40){
+
+                            Image(systemName: "circle").font(.system(size: 20.0,weight: .bold)).foregroundColor(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)))
                             
                             Image(systemName: "circle.inset.filled").font(.system(size: 20.0,weight: .bold)).foregroundColor(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)))
-                            
-                            Image(systemName: "circle").font(.system(size: 20.0,weight: .bold)).foregroundColor(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)))
                             
                             
                         }
                         
                         VStack (alignment: .leading){
-                            
-                            
                             Button {
                                 //action
+                            } label: {
+                                HStack {
+                                    ZStack{
+                                        RoundedRectangle(cornerRadius: 20)
+                                            .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 0.5)))
+                                            .frame(width: 50, height: 50)
+                                        Image("box_delivery").resizable().frame(width: 25, height: 25, alignment: .center).offset(x: -2)
+
+                                        
+                                    }
+                                }
+                                Text("Delivery").font(.system(size: 15, weight: .medium)).foregroundColor(Color.black).opacity(0.6)
+                                
+                            }
+                            
+                            Divider()
+
+                            Button {
+                                self.showAddress = true
                             } label: {
                                 HStack {
                                     ZStack{
@@ -181,25 +198,7 @@ struct CheckoutView: View {
                                         Image(systemName: "figure.walk").font(.system(size: 20.0,weight: .bold)).foregroundColor(.white)
                                     }
                                 }
-                                Text("Pick up").font(.system(size: 15, weight: .medium)).foregroundColor(Color.black).opacity(0.6)
-                                
-                            }
-                            Divider()
-                            
-                            Button {
-                                //action
-                            } label: {
-                                HStack {
-                                    ZStack{
-                                        RoundedRectangle(cornerRadius: 20)
-                                            .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 0.5)))
-                                            .frame(width: 50, height: 50)
-                                        Image(systemName: "arrow.left").font(.system(size: 20.0,weight: .bold)).foregroundColor(.white)
-                                        
-                                        
-                                    }
-                                }
-                                Text("Delivery").font(.system(size: 15, weight: .medium)).foregroundColor(Color.black).opacity(0.8)
+                                Text("Pick up").font(.system(size: 15, weight: .medium)).foregroundColor(Color.black).opacity(0.8)
                                 
                             }
                             
@@ -269,6 +268,10 @@ struct CheckoutView: View {
                 
             }
             
+            
+            
+
+            
             if $showProgress.wrappedValue{
                 ZStack{
                     RoundedRectangle(cornerRadius: 20)
@@ -312,6 +315,42 @@ struct CheckoutView: View {
                     }.padding()
                 }
                 .frame(width: 300, height:200)
+                .cornerRadius(20).shadow(radius: 20).offset(y: 50)
+            }
+            
+            if $showAddress.wrappedValue {
+                ZStack {
+                    
+                    Color.black.opacity(0.4)
+                    VStack {
+                        
+                        Text("Pick up Address").font(.system(size: 20, weight: .bold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                        
+                        GifImage("address").frame(width: 100, height: 100, alignment: .center).cornerRadius(17)
+                        
+                        Text("639 38th St, Rock Island, IL , 61201").font(.system(size: 20, weight: .bold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).multilineTextAlignment(.center)
+
+                        Spacer()
+                        Button(action: {
+                            self.showAddress = false
+                        }, label: {
+                            ZStack{
+                                
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352940797805786, blue: 0.3803921341896057, alpha: 0.33000001311302185)))
+                                    .frame(width: 45, height: 45)
+                                
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
+                                    .frame(width: 35, height: 35)
+                                
+                                Image(systemName: "xmark.circle").font(.system(size: 20.0,weight: .bold)).foregroundColor(.white)
+                                
+                            }
+                        })
+                    }.padding()
+                }
+                .frame(width: 300, height:300)
                 .cornerRadius(20).shadow(radius: 20).offset(y: 50)
             }
             

@@ -14,7 +14,7 @@ struct ContentView: View {
         ZStack{
             
             //Show Login View
-           ScanView()
+          CheckoutView()
         }
     }
 }

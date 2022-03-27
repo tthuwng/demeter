@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ItemView: View {
+    
+    @State private var showPopUp = false
+    @State private var counter: Int = 0
+    
+    
     var body: some View {
         ZStack{
             Color(#colorLiteral(red: 0.8842360973358154, green: 0.9916666746139526, blue: 0.9400999546051025, alpha: 1))
@@ -100,17 +105,20 @@ struct ItemView: View {
                     
                     HStack(spacing: 13){
                         Button {
-                            //action
+                            self.counter += 1
                         } label: {
-                        Image(systemName: "plus.circle.fill").font(.system(size: 20.0,weight: .bold)).foregroundColor(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)))
+                            Image(systemName: "plus.circle.fill").font(.system(size: 20.0,weight: .bold)).foregroundColor(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)))
                         }
                         
-                        Text("1").font(.system(size: 16, weight: .semibold))
+                        Text(String(self.counter)).font(.system(size: 16, weight: .semibold))
                         
                         Button {
-                            //action
+                            
+                            if (self.counter - 1 >= 0){
+                                self.counter -= 1
+                            }
                         } label: {
-                        Image(systemName: "minus.circle").font(.system(size: 20.0,weight: .bold)).foregroundColor(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)))
+                            Image(systemName: "minus.circle").font(.system(size: 20.0,weight: .bold)).foregroundColor(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)))
                         }
                     }.padding(.trailing,50).padding(.top,5)
                     
@@ -146,7 +154,7 @@ struct ItemView: View {
                 }
                 
                 Button {
-                    //action
+                    self.showPopUp = true
                 } label: {
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
@@ -165,7 +173,38 @@ struct ItemView: View {
                 Spacer()
             }
             
-            
+            if $showPopUp.wrappedValue {
+                ZStack {
+                    
+                    Color.black.opacity(0.4)
+                    VStack {
+                        
+                        Text("Added to Cart!").font(.system(size: 20, weight: .bold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                        
+                        GifImage("checked").frame(width: 100, height: 100, alignment: .center).cornerRadius(17)
+                        Spacer()
+                        Button(action: {
+                            self.showPopUp = false
+                        }, label: {
+                            ZStack{
+                                
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352940797805786, blue: 0.3803921341896057, alpha: 0.33000001311302185)))
+                                    .frame(width: 45, height: 45)
+                                
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
+                                    .frame(width: 35, height: 35)
+                                
+                                Image(systemName: "xmark.circle").font(.system(size: 20.0,weight: .bold)).foregroundColor(.white)
+                                
+                            }
+                        })
+                    }.padding()
+                }
+                .frame(width: 300, height:200)
+                .cornerRadius(20).shadow(radius: 20).offset(y: 50)
+            }
         }.ignoresSafeArea()
     }
 }

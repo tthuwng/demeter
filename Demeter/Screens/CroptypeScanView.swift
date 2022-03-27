@@ -11,7 +11,7 @@ struct CroptypeScanView: View {
     
     //This is not a database..lol
     private var categoriesList = ["All", "Fruits", "Vegetable", "Herbs", "Organic","Inorganic"]
-    private var itemsList = ["corn": ["Corn", "Cereal", "1 mile away", "$2.30"],"pineapple": ["Pineapple", "Fruit", "2 miles away", "$1.20"],"apple": ["Apple", "Fruit", "3 miles away", "$0.50"],"orange": ["Orange", "Fruit", "<1 mile away", "$0.20"]]
+    private var itemsList = ["maizeLeaf": ["Maize", "Cereal", "1 mile away", "$2.30"],"pineappleLeaf": ["Pineapple", "Fruit", "2 miles away", "$1.20"],"appleLeaf": ["Apple", "Fruit", "3 miles away", "$0.50"],"orangeLeaf": ["Orange", "Fruit", "<1 mile away", "$0.20"]]
     
     
     let columns = [

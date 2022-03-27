@@ -11,6 +11,9 @@ struct HomeView: View {
     
     @State private var searchField: String = String()
     @State private var welcomeText: String = "Enjoy 20% discount  \nevery Friday"
+    @State private var showPopUp = false
+    @State private var cartSize: Int = 0
+
     
     
     //This is not a database..lol
@@ -28,6 +31,35 @@ struct HomeView: View {
     var body: some View {
         ZStack{
             Color(#colorLiteral(red: 0.8842360973358154, green: 0.9916666746139526, blue: 0.9400999546051025, alpha: 1))
+            
+            //Ellipse 1
+            Ellipse()
+                .fill(Color(#colorLiteral(red: 0.7921568751335144, green: 0.9529411792755127, blue: 0.8784313797950745, alpha: 1)))
+                .frame(width: 51, height: 49).offset(x:-170,y:-420)
+            
+            //Ellipse 2
+            Ellipse()
+                .fill(Color(#colorLiteral(red: 0.7911632061004639, green: 0.9541666507720947, blue: 0.8784864544868469, alpha: 1)))
+                .frame(width: 228, height: 219)
+                .offset(x:170,y:-420)
+            
+            //Ellipse 3
+            Ellipse()
+                .fill(Color(#colorLiteral(red: 0.7921568751335144, green: 0.9529411792755127, blue: 0.8784313797950745, alpha: 1)))
+                .frame(width: 51, height: 49).offset(x:200,y:130)
+            
+            //Ellipse 4
+            Ellipse()
+                .fill(Color(#colorLiteral(red: 0.7911632061004639, green: 0.9541666507720947, blue: 0.8784864544868469, alpha: 1)))
+                .frame(width: 228, height: 219)
+                .offset(x:-190,y:450)
+            
+            //Ellipse 5
+            Ellipse()
+                .fill(Color(#colorLiteral(red: 0.7911632061004639, green: 0.9541666507720947, blue: 0.8784864544868469, alpha: 1)))
+                .frame(width: 228, height: 219)
+                .offset(x:0,y:-50)
+            
             
             VStack{
                 Spacer()
@@ -112,10 +144,14 @@ struct HomeView: View {
                     .padding()
                 }
                 
+                
+                
+                
                 ScrollView{
                     LazyVGrid(columns: columns, spacing: 20) {
                         ForEach(Array(itemsList.keys), id: \.self) { item in
                             ZStack {
+                                
                                 
                                 
                                 Button {
@@ -165,8 +201,11 @@ struct HomeView: View {
                                     
                                 }
                                 .frame(width: 157, height: 218)
+                                
+                                
                                 Button {
-                                    //action
+                                    self.showPopUp = true
+                                    self.cartSize += 1
                                 } label: {
                                     ZStack{
                                         //Cart
@@ -177,6 +216,7 @@ struct HomeView: View {
                                         
                                     }.padding(.trailing, 10)
                                 }.offset(x: 50, y: 77)
+                                
                                 
                                 
                                 Button {
@@ -201,48 +241,60 @@ struct HomeView: View {
                     
                     HStack(spacing: 60){
                         
-                        
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352940797805786, blue: 0.3803921341896057, alpha: 0.33000001311302185)))
-                                .frame(width: 55, height: 50)
-                            
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
-                                .frame(width: 45, height: 45).offset()
-                            
-                            Image(systemName: "ant").font(.system(size: 20.0,weight: .bold)).foregroundColor(.white)
-                            
-                            
+                        Button {
+                            //action
+                        } label: {
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352940797805786, blue: 0.3803921341896057, alpha: 0.33000001311302185)))
+                                    .frame(width: 55, height: 50)
+                                
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
+                                    .frame(width: 45, height: 45).offset()
+                                
+                                Image(systemName: "ant").font(.system(size: 20.0,weight: .bold)).foregroundColor(.white)
+                                
+                                
+                            }
                         }
                         
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352940797805786, blue: 0.3803921341896057, alpha: 0.33000001311302185)))
-                                .frame(width: 55, height: 50)
-                            
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
-                                .frame(width: 45, height: 45).offset()
-                            
-                            Image(systemName: "bag.badge.plus").font(.system(size: 20.0,weight: .bold)).foregroundColor(.white)
-                            
-                            
+                        Button {
+                            //action
+                        } label: {
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352940797805786, blue: 0.3803921341896057, alpha: 0.33000001311302185)))
+                                    .frame(width: 55, height: 50)
+                                
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
+                                    .frame(width: 45, height: 45).offset()
+                                
+                                Image(systemName: "bag.badge.plus").font(.system(size: 20.0,weight: .bold)).foregroundColor(.white)
+                                
+                                
+                            }
                         }
                         
-                        ZStack{
-                           
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352940797805786, blue: 0.3803921341896057, alpha: 0.33000001311302185)))
-                                .frame(width: 55, height: 50)
-                            
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
-                                .frame(width: 45, height: 45)
-                            
-                            Image(systemName: "cart").font(.system(size: 20.0,weight: .bold)).foregroundColor(.white)
-                            
-                            
+                        Button {
+                            //action
+                        } label: {
+                            ZStack{
+                                
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352940797805786, blue: 0.3803921341896057, alpha: 0.33000001311302185)))
+                                    .frame(width: 55, height: 50)
+                                
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
+                                    .frame(width: 45, height: 45)
+                                
+                                Image(systemName: "cart").font(.system(size: 20.0,weight: .bold)).foregroundColor(.white)
+                                
+                                Text(String(self.cartSize)).font(.system(size: 10, weight: .bold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).offset(y: -14)
+                                
+                            }
                         }
                         
                         
@@ -251,6 +303,39 @@ struct HomeView: View {
                 
                 Spacer()
                 
+            }
+            
+            if $showPopUp.wrappedValue {
+                ZStack {
+                    
+                    Color.black.opacity(0.4)
+                    VStack {
+                        
+                        Text("Added to Cart!").font(.system(size: 20, weight: .bold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                        
+                        GifImage("checked").frame(width: 100, height: 100, alignment: .center).cornerRadius(17)
+                        Spacer()
+                        Button(action: {
+                            self.showPopUp = false
+                        }, label: {
+                            ZStack{
+                                
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352940797805786, blue: 0.3803921341896057, alpha: 0.33000001311302185)))
+                                    .frame(width: 45, height: 45)
+                                
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
+                                    .frame(width: 35, height: 35)
+                                
+                                Image(systemName: "xmark.circle").font(.system(size: 20.0,weight: .bold)).foregroundColor(.white)
+                                
+                            }
+                        })
+                    }.padding()
+                }
+                .frame(width: 300, height:200)
+                .cornerRadius(20).shadow(radius: 20).offset(y: 50)
             }
             
         }.ignoresSafeArea(.all)
@@ -262,5 +347,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+        //.previewDevice("IPhone 13 Pro")
     }
 }

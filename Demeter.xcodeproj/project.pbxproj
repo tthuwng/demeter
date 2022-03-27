@@ -12,6 +12,8 @@
 		1451B77D27DAD69500D908E6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1451B77C27DAD69500D908E6 /* OnboardingView.swift */; };
 		1451B77F27DAD89000D908E6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1451B77E27DAD89000D908E6 /* HomeView.swift */; };
 		1451B78527DADAF900D908E6 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1451B78427DADAF900D908E6 /* SplashScreenView.swift */; };
+		146347E127F01C6300DE9D7A /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146347E027F01C6300DE9D7A /* GifImage.swift */; };
+		146347F227F02A5400DE9D7A /* scanning.gif in Resources */ = {isa = PBXBuildFile; fileRef = 146347F127F02A5400DE9D7A /* scanning.gif */; };
 		14BA675727EF93EB008F86EB /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA675627EF93EB008F86EB /* ItemView.swift */; };
 		14BA675927EF9D85008F86EB /* CroptypeScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA675827EF9D85008F86EB /* CroptypeScanView.swift */; };
 		14BA675B27EFA000008F86EB /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA675A27EFA000008F86EB /* ScanView.swift */; };
@@ -21,6 +23,12 @@
 		14BA676827EFA286008F86EB /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA676727EFA286008F86EB /* ZoomableScrollView.swift */; };
 		14BA676A27EFA2CB008F86EB /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA676927EFA2CB008F86EB /* FileManager+Extension.swift */; };
 		14BA676D27EFB1BF008F86EB /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA676C27EFB1BF008F86EB /* ResultsView.swift */; };
+		14D1EAE327F0E94200735E46 /* checked.gif in Resources */ = {isa = PBXBuildFile; fileRef = 14D1EAE227F0E94200735E46 /* checked.gif */; };
+		14D1EAE527F0EB8D00735E46 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D1EAE427F0EB8D00735E46 /* AddItemView.swift */; };
+		14D1EAEB27F0F6CF00735E46 /* done.gif in Resources */ = {isa = PBXBuildFile; fileRef = 14D1EAEA27F0F6CF00735E46 /* done.gif */; };
+		14D1EAED27F1026C00735E46 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D1EAEC27F1026C00735E46 /* CartView.swift */; };
+		14D1EAEF27F10FFD00735E46 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D1EAEE27F10FFD00735E46 /* CheckoutView.swift */; };
+		14D1EAF127F1193500735E46 /* payment.gif in Resources */ = {isa = PBXBuildFile; fileRef = 14D1EAF027F1193500735E46 /* payment.gif */; };
 		C9E15D7B27D6BD67002E90D7 /* DemeterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E15D7A27D6BD67002E90D7 /* DemeterApp.swift */; };
 		C9E15D7D27D6BD67002E90D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E15D7C27D6BD67002E90D7 /* ContentView.swift */; };
 		C9E15D7F27D6BD68002E90D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9E15D7E27D6BD68002E90D7 /* Assets.xcassets */; };
@@ -34,6 +42,8 @@
 		1451B77C27DAD69500D908E6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		1451B77E27DAD89000D908E6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1451B78427DADAF900D908E6 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		146347E027F01C6300DE9D7A /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
+		146347F127F02A5400DE9D7A /* scanning.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = scanning.gif; sourceTree = "<group>"; };
 		14BA675627EF93EB008F86EB /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		14BA675827EF9D85008F86EB /* CroptypeScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroptypeScanView.swift; sourceTree = "<group>"; };
 		14BA675A27EFA000008F86EB /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
@@ -44,6 +54,12 @@
 		14BA676927EFA2CB008F86EB /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		14BA676B27EFA9E6008F86EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		14BA676C27EFB1BF008F86EB /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		14D1EAE227F0E94200735E46 /* checked.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = checked.gif; sourceTree = "<group>"; };
+		14D1EAE427F0EB8D00735E46 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		14D1EAEA27F0F6CF00735E46 /* done.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = done.gif; sourceTree = "<group>"; };
+		14D1EAEC27F1026C00735E46 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		14D1EAEE27F10FFD00735E46 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		14D1EAF027F1193500735E46 /* payment.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = payment.gif; sourceTree = "<group>"; };
 		C9E15D7727D6BD67002E90D7 /* Demeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E15D7A27D6BD67002E90D7 /* DemeterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemeterApp.swift; sourceTree = "<group>"; };
 		C9E15D7C27D6BD67002E90D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,8 +93,23 @@
 				14BA675827EF9D85008F86EB /* CroptypeScanView.swift */,
 				14BA675A27EFA000008F86EB /* ScanView.swift */,
 				14BA676C27EFB1BF008F86EB /* ResultsView.swift */,
+				146347E027F01C6300DE9D7A /* GifImage.swift */,
+				14D1EAE427F0EB8D00735E46 /* AddItemView.swift */,
+				14D1EAEC27F1026C00735E46 /* CartView.swift */,
+				14D1EAEE27F10FFD00735E46 /* CheckoutView.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		146347E227F01C8400DE9D7A /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				14D1EAF027F1193500735E46 /* payment.gif */,
+				14D1EAEA27F0F6CF00735E46 /* done.gif */,
+				14D1EAE227F0E94200735E46 /* checked.gif */,
+				146347F127F02A5400DE9D7A /* scanning.gif */,
+			);
+			path = Gif;
 			sourceTree = "<group>";
 		};
 		14BA675D27EFA198008F86EB /* ViewModels */ = {
@@ -117,6 +148,7 @@
 		C9E15D6E27D6BD67002E90D7 = {
 			isa = PBXGroup;
 			children = (
+				146347E227F01C8400DE9D7A /* Gif */,
 				C9E15D7927D6BD67002E90D7 /* Demeter */,
 				C9E15D7827D6BD67002E90D7 /* Products */,
 			);
@@ -212,8 +244,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146347F227F02A5400DE9D7A /* scanning.gif in Resources */,
 				C9E15D8227D6BD68002E90D7 /* Preview Assets.xcassets in Resources */,
+				14D1EAEB27F0F6CF00735E46 /* done.gif in Resources */,
+				14D1EAE327F0E94200735E46 /* checked.gif in Resources */,
 				C9E15D7F27D6BD68002E90D7 /* Assets.xcassets in Resources */,
+				14D1EAF127F1193500735E46 /* payment.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,18 +262,22 @@
 			files = (
 				1451B78527DADAF900D908E6 /* SplashScreenView.swift in Sources */,
 				C9E15D8A27D6C42D002E90D7 /* LoginView.swift in Sources */,
+				146347E127F01C6300DE9D7A /* GifImage.swift in Sources */,
 				14BA675727EF93EB008F86EB /* ItemView.swift in Sources */,
 				14BA675927EF9D85008F86EB /* CroptypeScanView.swift in Sources */,
 				14BA675B27EFA000008F86EB /* ScanView.swift in Sources */,
 				14BA676827EFA286008F86EB /* ZoomableScrollView.swift in Sources */,
 				14BA676227EFA20E008F86EB /* ViewModel.swift in Sources */,
 				C9E15D7D27D6BD67002E90D7 /* ContentView.swift in Sources */,
+				14D1EAE527F0EB8D00735E46 /* AddItemView.swift in Sources */,
+				14D1EAED27F1026C00735E46 /* CartView.swift in Sources */,
 				1451B77F27DAD89000D908E6 /* HomeView.swift in Sources */,
 				14BA676427EFA228008F86EB /* Picker.swift in Sources */,
 				14BA676A27EFA2CB008F86EB /* FileManager+Extension.swift in Sources */,
 				1451B77D27DAD69500D908E6 /* OnboardingView.swift in Sources */,
 				142A21C827EAA4DD00D7FA1F /* ThirdOnboardingView.swift in Sources */,
 				14BA676627EFA25E008F86EB /* ImagePicker.swift in Sources */,
+				14D1EAEF27F10FFD00735E46 /* CheckoutView.swift in Sources */,
 				C9E15D7B27D6BD67002E90D7 /* DemeterApp.swift in Sources */,
 				14BA676D27EFB1BF008F86EB /* ResultsView.swift in Sources */,
 				142A21C627EAA3DC00D7FA1F /* SecondOnboardingView.swift in Sources */,

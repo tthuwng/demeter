@@ -2,7 +2,7 @@
 //  LoginView.swift
 //  Demeter
 //
-//  Created by Hung Tran on 3/7/22.
+//  Created by Paul Addai on 3/10/22.
 //
 
 import SwiftUI
@@ -60,9 +60,18 @@ struct LoginView: View {
                 
                 
                 HStack{
-                    Text("Login").font(.system(size: 18, weight: .semibold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                    Button {
+                        //action
+                    } label: {
+                        Text("Login").font(.system(size: 18, weight: .semibold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                    }
                     Spacer().frame(width: 180, height: 0, alignment: .center)
-                    Text("Sign up").font(.system(size: 18, weight: .semibold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                    
+                    Button {
+                        //action
+                    } label: {
+                        Text("Sign up").font(.system(size: 18, weight: .semibold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                    }
                     
                 }.padding().offset(x: 0, y: 150)
                 
@@ -91,12 +100,16 @@ struct LoginView: View {
                     .padding()
                 
                 
-                ZStack{
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
-                        .frame(width: 188, height: 55)
-                    
-                    Text("Login").font(.system(size: 15, weight: .bold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                Button {
+                    //action
+                } label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
+                            .frame(width: 188, height: 55)
+                        
+                        Text("Login").font(.system(size: 15, weight: .bold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                    }
                 }
             }.frame(width: 350, height: 100, alignment: .center)
             

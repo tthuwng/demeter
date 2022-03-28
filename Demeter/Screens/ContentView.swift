@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var vm: ViewModel
+
     var body: some View {
         ZStack{
             
             //Show Login View
-            LoginView()
+          CheckoutView()
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(ViewModel())
     }
 }

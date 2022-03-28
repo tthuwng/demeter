@@ -2,86 +2,117 @@
 //  LoginView.swift
 //  Demeter
 //
-//  Created by Hung Tran on 3/7/22.
+//  Created by Paul Addai on 3/10/22.
 //
 
 import SwiftUI
 
 struct LoginView: View {
     
-    @State var isLoginMode = false
-    @State var email = ""
-    @State var password = ""
+    
+    @State private var passwordField: String = String()
+    @State private var usernameField: String = String()
     
     @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
     
     var body: some View {
-        NavigationView {
-            ScrollView {
+        ZStack{
+            Color(#colorLiteral(red: 0.8842360973358154, green: 0.9916666746139526, blue: 0.9400999546051025, alpha: 1)).ignoresSafeArea()
+            
+            
+            //Ellipse 1
+            Ellipse()
+                .fill(Color(#colorLiteral(red: 0.7921568751335144, green: 0.9529411792755127, blue: 0.8784313797950745, alpha: 1)))
+                .frame(width: 51, height: 49).offset(x:-170,y:0)
+            
+            
+            //Ellipse 2
+            Ellipse()
+                .fill(Color(#colorLiteral(red: 0.7921568751335144, green: 0.9529411792755127, blue: 0.8784313797950745, alpha: 1)))
+                .frame(width: 51, height: 49).offset(x:-140,y:150)
+            
+            //Ellipse 3
+            Ellipse()
+                .fill(Color(#colorLiteral(red: 0.7911632061004639, green: 0.9541666507720947, blue: 0.8784864544868469, alpha: 1)))
+                .frame(width: 228, height: 219)
+                .offset(x:-200,y:380)
+            
+            
+            
+            //Ellipse 4
+            Ellipse()
+                .fill(Color(#colorLiteral(red: 0.7911632061004639, green: 0.9541666507720947, blue: 0.8784864544868469, alpha: 1)))
+                .frame(width: 228, height: 219)
+                .offset(x:250,y:160)
+            
+            
+            ZStack{
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)))
+                    .frame(width: 390, height: 350)
+                    .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.3)), radius:2, x:0, y:4)
                 
-                VStack(spacing: 16) {
-                    Picker(selection: $isLoginMode, label: Text("Picker here")) {
-                        Text("Login")
-                            .tag(true)
-                        Text("Create Account")
-                            .tag(false)
-                    }.pickerStyle(SegmentedPickerStyle())
-                        
-                    if !isLoginMode {
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "person.fill")
-                                .font(.system(size: 64))
-                                .padding()
-                        }
-                    }
+                VStack{
+                    Image("logo_big").resizable().frame(width: 100, height: 100, alignment: .center)
                     
-                    Group {
-                        TextField("Email", text: $email)
-                            .keyboardType(.emailAddress)
-                            .autocapitalization(.none)
-                        SecureField("Password", text: $password)
+                    Text("Demeter").font(.system(size: 36, weight: .regular, design: .rounded)).foregroundColor(Color(#colorLiteral(red: 0.96, green: 0.96, blue: 0.96, alpha: 1))).offset(x: 0, y: -10)
+                }
+                
+                
+                HStack{
+                    Button {
+                        //action
+                    } label: {
+                        Text("Login").font(.system(size: 18, weight: .semibold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                     }
-                    .padding(12)
-                    .background(Color.white)
+                    Spacer().frame(width: 180, height: 0, alignment: .center)
                     
                     Button {
-                        handleAction()
+                        //action
                     } label: {
-                        HStack {
-                            Spacer()
-                            Text(isLoginMode ? "Log In" : "Create Account")
-                                .foregroundColor(.white)
-                                .padding(.vertical, 10)
-                                .font(.system(size: 14, weight: .semibold))
-                            Spacer()
-                        }.background(Color.blue)
+                        Text("Sign up").font(.system(size: 18, weight: .semibold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                    }
+                    
+                }.padding().offset(x: 0, y: 150)
+                
+                RoundedRectangle(cornerRadius: 40)
+                    .fill(Color(#colorLiteral(red: 0.9583333134651184, green: 0.9583333134651184, blue: 0.9583333134651184, alpha: 1))).offset(x: -120, y: 165)
+                    .frame(width: 87, height: 3)
+                
+                
+            }.offset(x: 0, y: -260)
+            
+            
+            
+            VStack{
+                
+                Spacer().frame(width: 0, height: 120, alignment: .center)
+                TextField("Username", text: $usernameField)
+                    .font(.system(size: 15, weight: .semibold))
+                    .padding().multilineTextAlignment(.center)
+                    .overlay(RoundedRectangle(cornerRadius: 30.0).strokeBorder(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)), style: StrokeStyle(lineWidth: 3.0)))
+                    .padding()
+                
+                SecureField("Password", text: $passwordField)
+                    .font(.system(size: 15, weight: .semibold))
+                    .padding().multilineTextAlignment(.center)
+                    .overlay(RoundedRectangle(cornerRadius: 30.0).strokeBorder(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)), style: StrokeStyle(lineWidth: 3.0)))
+                    .padding()
+                
+                
+                Button {
+                    //action
+                } label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
+                            .frame(width: 188, height: 55)
                         
+                        Text("Login").font(.system(size: 15, weight: .bold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                     }
                 }
-                .padding()
-                
-            }
-            .navigationTitle(isLoginMode ? "Log In" : "Create Account")
-            .background(Color(.init(white: 0, alpha: 0.05))
-                            .ignoresSafeArea())
-        }
-    }
-    
-    private func handleAction() {
-        if isLoginMode {
-            print("Should log into Firebase with existing credentials")
+            }.frame(width: 350, height: 100, alignment: .center)
             
-            //Show onboarding view for once else show Home View
-            if isOnboardingViewActive {
-                OnboardingView()
-            }else{
-                HomeView()
-            }
-            
-        } else {
-            print("Register a new account inside of Firebase Auth and then store image in Storage somehow....")
         }
     }
 }

@@ -60,7 +60,7 @@ struct AddItemView: View {
                 
                 Spacer()
                 VStack{
-                    Image("logo_green").resizable().frame(width: 30, height: 30, alignment: .center).padding(.top,15)
+                    Image("logo_green").resizable().frame(width: 30, height: 30, alignment: .center).padding(.top,50)
                     
                     HStack{
                         Button {
@@ -83,7 +83,11 @@ struct AddItemView: View {
                         
                     }.padding()
                     
+                    Text("Checkout").font(.system(size: 16, weight: .bold, design: .rounded)).foregroundColor(Color(#colorLiteral(red: 0.13, green: 0.16, blue: 0.18, alpha: 1)))
+
+                    
                 }
+                
                 
                 ZStack {
                     

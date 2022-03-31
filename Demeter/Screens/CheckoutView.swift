@@ -11,10 +11,10 @@ struct CheckoutView: View {
     
     @State private var showPopUp = false
     @State private var showProgress = false
-    
     @State private var showAddress = false
-
-
+    
+    @State var showHomeView = false
+    
     
     var body: some View {
         ZStack{
@@ -56,7 +56,7 @@ struct CheckoutView: View {
                     HStack{
                         
                         Button {
-                            //action
+                            self.showHomeView = true
                         } label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 20)
@@ -67,6 +67,7 @@ struct CheckoutView: View {
                                 
                             }
                         }
+                        
                         
                         Spacer()
                         
@@ -158,7 +159,7 @@ struct CheckoutView: View {
                     
                     HStack {
                         VStack(spacing: 40){
-
+                            
                             Image(systemName: "circle").font(.system(size: 20.0,weight: .bold)).foregroundColor(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)))
                             
                             Image(systemName: "circle.inset.filled").font(.system(size: 20.0,weight: .bold)).foregroundColor(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)))
@@ -176,7 +177,7 @@ struct CheckoutView: View {
                                             .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 0.5)))
                                             .frame(width: 50, height: 50)
                                         Image("box_delivery").resizable().frame(width: 25, height: 25, alignment: .center).offset(x: -2)
-
+                                        
                                         
                                     }
                                 }
@@ -185,7 +186,7 @@ struct CheckoutView: View {
                             }
                             
                             Divider()
-
+                            
                             Button {
                                 self.showAddress = true
                             } label: {
@@ -239,11 +240,11 @@ struct CheckoutView: View {
                         
                         self.showProgress = true
                         
-                
+                        
                         //Delay (For demo purpse)
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                             self.showProgress = false
-
+                            
                             self.showPopUp = true
                             
                         }
@@ -270,7 +271,7 @@ struct CheckoutView: View {
             
             
             
-
+            
             
             if $showProgress.wrappedValue{
                 ZStack{
@@ -297,6 +298,7 @@ struct CheckoutView: View {
                         Spacer()
                         Button(action: {
                             self.showPopUp = false
+                            self.showHomeView = true
                         }, label: {
                             ZStack{
                                 
@@ -329,7 +331,7 @@ struct CheckoutView: View {
                         GifImage("address").frame(width: 100, height: 100, alignment: .center).cornerRadius(17)
                         
                         Text("639 38th St, Rock Island, IL , 61201").font(.system(size: 20, weight: .bold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).multilineTextAlignment(.center)
-
+                        
                         Spacer()
                         Button(action: {
                             self.showAddress = false
@@ -355,7 +357,13 @@ struct CheckoutView: View {
             }
             
             
-            
+            if $showHomeView.wrappedValue{
+                
+                withAnimation{
+                    HomeView()
+                }.transition(AnyTransition.move(edge: .leading).combined(with: .opacity)).animation(Animation.easeInOut(duration: 0.5))
+                
+            }
         }.ignoresSafeArea().frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
     }
     

@@ -12,6 +12,8 @@ struct ItemView: View {
     @State private var showPopUp = false
     @State private var counter: Int = 0
     
+    @State private var showHomeView = false
+
     
     var body: some View {
         ZStack{
@@ -53,6 +55,8 @@ struct ItemView: View {
                     HStack{
                         Button {
                             //action
+                            self.showHomeView = true
+                            
                         } label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 20)
@@ -150,7 +154,7 @@ struct ItemView: View {
                 
                 HStack(spacing: 220){
                     Text("Price").font(.system(size: 20, weight: .semibold))
-                    Text("$2.30/kg").font(.system(size: 20, weight: .semibold))
+                    Text("$0.90").font(.system(size: 20, weight: .semibold))
                 }
                 
                 Button {
@@ -204,6 +208,14 @@ struct ItemView: View {
                 }
                 .frame(width: 300, height:200)
                 .cornerRadius(20).shadow(radius: 20).offset(y: 50)
+            }
+            
+            if $showHomeView.wrappedValue{
+                
+                withAnimation{
+                    HomeView()
+                }.transition(AnyTransition.move(edge: .leading).combined(with: .opacity)).animation(Animation.easeInOut(duration: 0.5))
+                
             }
         }.ignoresSafeArea()
     }

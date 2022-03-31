@@ -9,6 +9,10 @@ import SwiftUI
 
 struct OnboardingView: View {
     @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
+    @State private var showOnboardingView = false
+
+    
+    
     
     var body: some View {
         ZStack {
@@ -39,7 +43,7 @@ struct OnboardingView: View {
                 
                 //Getting Started!
                 HStack{
-                    Text("Getting Started!").font(.system(size: 26, weight: .semibold)).offset(x: 0, y: 20)
+                    Text("Almost there!").font(.system(size: 26, weight: .semibold)).offset(x: 0, y: 20)
                     Spacer().frame(width: 130, height: 10, alignment: .center)
                     
                     Spacer().frame(width: 30, height: 0, alignment: .center)
@@ -53,14 +57,7 @@ struct OnboardingView: View {
                 
                 HStack(spacing: 40){
                     
-                    Button {
-                        //action
-                    } label: {
-                        //Ellipse 1
-                        Circle()
-                            .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
-                            .frame(width: 14, height: 14)
-                    }
+              
                     
                     Button {
                         //action
@@ -68,6 +65,15 @@ struct OnboardingView: View {
                         //Ellipse 2
                         Circle()
                             .fill(Color(#colorLiteral(red: 0.9058823585510254, green: 0.8745098114013672, blue: 0.7568627595901489, alpha: 1)))
+                            .frame(width: 14, height: 14)
+                    }
+                    
+                    Button {
+                        //action
+                    } label: {
+                        //Ellipse 1
+                        Circle()
+                            .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
                             .frame(width: 14, height: 14)
                     }
                     
@@ -88,6 +94,7 @@ struct OnboardingView: View {
                     
                     Button {
                         //action
+                        self.showOnboardingView = true
                     } label: {
                         ZStack{
                             //Rectangle 8
@@ -114,7 +121,11 @@ struct OnboardingView: View {
             }
             
             
-            
+            if $showOnboardingView.wrappedValue{
+                    withAnimation{
+                      ThirdOnboardingView()
+                    }.transition(AnyTransition.move(edge: .trailing).combined(with: .opacity)).animation(Animation.easeInOut(duration: 0.5))
+                }
             
         }
     }

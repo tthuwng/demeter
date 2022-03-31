@@ -14,6 +14,9 @@ struct CroptypeScanView: View {
     private var itemsList = ["maizeLeaf": ["Maize", "Cereal", "1 mile away", "$2.30"],"pineappleLeaf": ["Pineapple", "Fruit", "2 miles away", "$1.20"],"appleLeaf": ["Apple", "Fruit", "3 miles away", "$0.50"],"orangeLeaf": ["Orange", "Fruit", "<1 mile away", "$0.20"]]
     
     
+    @State private var showScanView = false
+
+    
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible()),
@@ -101,7 +104,7 @@ struct CroptypeScanView: View {
                         ForEach(Array(itemsList.keys), id: \.self) { item in
                             
                             Button {
-                                //action
+                                self.showScanView = true
                             } label: {
                                 ZStack {
                                     Image(item)
@@ -130,6 +133,14 @@ struct CroptypeScanView: View {
                 
                 Spacer()
                 
+               
+            }
+            
+            if $showScanView.wrappedValue{
+                
+                withAnimation{
+                    ScanView()
+                }.transition(AnyTransition.move(edge: .trailing).combined(with: .opacity)).animation(Animation.easeInOut(duration: 0.5))
                 
             }
         }.ignoresSafeArea()

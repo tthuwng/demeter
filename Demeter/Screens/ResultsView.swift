@@ -10,9 +10,15 @@ import SwiftUI
 struct ResultsView: View {
     
     //This is not a database..lol
-    private var diseaseList = ["Rust":[80],"Blight":[82]]
-    private var colorList = ["Rust":[Color(#colorLiteral(red: 0.25979167222976685, green: 0.7250000238418579, blue: 0.25979167222976685, alpha: 1))],"Blight":[Color(#colorLiteral(red: 0.8333333134651184, green: 0.347222238779068, blue: 0.347222238779068, alpha: 1))]]
+    private var diseaseList = ["Blight":[73]]
+    private var colorList = ["Blight":[Color(#colorLiteral(red: 0.8333333134651184, green: 0.347222238779068, blue: 0.347222238779068, alpha: 1))]]
     
+    
+    @State private var showSolution = false
+    @State private var showHomeView = false
+
+    
+
     
     
     let columns = [
@@ -54,13 +60,20 @@ struct ResultsView: View {
             
             VStack{
                 VStack{
-                    Image("logo_green").resizable().frame(width: 30, height: 30, alignment: .center).padding(.top,15)
                     
+                    Button {
+                        //action
+                        self.showHomeView = true
+                        
+                    } label: {
+                    Image("logo_green").resizable().frame(width: 30, height: 30, alignment: .center).padding(.top,15)
+                    }
                     
                     HStack{
                         
                         Button {
                             //action
+                           
                         } label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 20)
@@ -94,6 +107,9 @@ struct ResultsView: View {
                 ZStack{
                     RoundedRectangle(cornerRadius: 20)
                         .strokeBorder(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)), lineWidth: 5)
+                    
+                    Image("sample_for_demo").resizable().frame(width: 350, height: 340, alignment: .center).cornerRadius(15)
+
                     Text("Detected Diseases").font(.system(size: 11, weight: .semibold)).multilineTextAlignment(.center).offset(y: 195)
                 }.frame(height: 350, alignment: .center).padding().offset(y: -15)
                 
@@ -137,6 +153,7 @@ struct ResultsView: View {
                 
                 Button {
                     //action
+                    self.showSolution = true
                 } label: {
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
@@ -155,6 +172,50 @@ struct ResultsView: View {
                 
                 Spacer()
             }
+            
+            if $showSolution.wrappedValue {
+                ZStack {
+                    
+                    Color.black.opacity(0.4)
+                    VStack {
+                        
+                        Text("Solution!").font(.system(size: 20, weight: .bold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                        
+                        GifImage("bulb").frame(width: 100, height: 100, alignment: .center).cornerRadius(17)
+                        
+                        Text("A quick tip for solving blight disease is to apply fungicides to the crop.").font(.system(size: 20, weight: .bold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).multilineTextAlignment(.center)
+                        
+                        Spacer()
+                        Button(action: {
+                            self.showSolution = false
+                        }, label: {
+                            ZStack{
+                                
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352940797805786, blue: 0.3803921341896057, alpha: 0.33000001311302185)))
+                                    .frame(width: 45, height: 45)
+                                
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
+                                    .frame(width: 35, height: 35)
+                                
+                                Image(systemName: "xmark.circle").font(.system(size: 20.0,weight: .bold)).foregroundColor(.white)
+                                
+                            }
+                        })
+                    }.padding()
+                }
+                .frame(width: 300, height:330)
+                .cornerRadius(20).shadow(radius: 20).offset(y: 50)
+            }
+            
+            if $showHomeView.wrappedValue{
+                withAnimation{
+                  HomeView()
+                }.transition(AnyTransition.move(edge: .trailing).combined(with: .opacity)).animation(Animation.easeInOut(duration: 0.5))
+                
+            }
+            
             
         }.ignoresSafeArea().frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
     }

@@ -23,6 +23,7 @@
 		14BA676827EFA286008F86EB /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA676727EFA286008F86EB /* ZoomableScrollView.swift */; };
 		14BA676A27EFA2CB008F86EB /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA676927EFA2CB008F86EB /* FileManager+Extension.swift */; };
 		14BA676D27EFB1BF008F86EB /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA676C27EFB1BF008F86EB /* ResultsView.swift */; };
+		14C0132127F530A600825F35 /* bulb.gif in Resources */ = {isa = PBXBuildFile; fileRef = 14C0132027F530A600825F35 /* bulb.gif */; };
 		14D1EAE327F0E94200735E46 /* checked.gif in Resources */ = {isa = PBXBuildFile; fileRef = 14D1EAE227F0E94200735E46 /* checked.gif */; };
 		14D1EAE527F0EB8D00735E46 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D1EAE427F0EB8D00735E46 /* AddItemView.swift */; };
 		14D1EAEB27F0F6CF00735E46 /* done.gif in Resources */ = {isa = PBXBuildFile; fileRef = 14D1EAEA27F0F6CF00735E46 /* done.gif */; };
@@ -55,6 +56,7 @@
 		14BA676927EFA2CB008F86EB /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		14BA676B27EFA9E6008F86EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		14BA676C27EFB1BF008F86EB /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		14C0132027F530A600825F35 /* bulb.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bulb.gif; sourceTree = "<group>"; };
 		14D1EAE227F0E94200735E46 /* checked.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = checked.gif; sourceTree = "<group>"; };
 		14D1EAE427F0EB8D00735E46 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		14D1EAEA27F0F6CF00735E46 /* done.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = done.gif; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		146347E227F01C8400DE9D7A /* Gif */ = {
 			isa = PBXGroup;
 			children = (
+				14C0132027F530A600825F35 /* bulb.gif */,
 				14D1EAF227F1258300735E46 /* address.gif */,
 				14D1EAF027F1193500735E46 /* payment.gif */,
 				14D1EAEA27F0F6CF00735E46 /* done.gif */,
@@ -248,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14D1EAF327F1258300735E46 /* address.gif in Resources */,
+				14C0132127F530A600825F35 /* bulb.gif in Resources */,
 				146347F227F02A5400DE9D7A /* scanning.gif in Resources */,
 				C9E15D8227D6BD68002E90D7 /* Preview Assets.xcassets in Resources */,
 				14D1EAEB27F0F6CF00735E46 /* done.gif in Resources */,

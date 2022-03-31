@@ -154,7 +154,7 @@ struct ItemView: View {
                 
                 HStack(spacing: 220){
                     Text("Price").font(.system(size: 20, weight: .semibold))
-                    Text("$2.30/kg").font(.system(size: 20, weight: .semibold))
+                    Text("$0.90").font(.system(size: 20, weight: .semibold))
                 }
                 
                 Button {

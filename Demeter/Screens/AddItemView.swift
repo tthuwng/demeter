@@ -20,10 +20,6 @@ struct AddItemView: View {
     @State private var showHomeView = false
 
 
-
-
-    
-    
     var body: some View {
         ZStack{
             Color(#colorLiteral(red: 0.8842360973358154, green: 0.9916666746139526, blue: 0.9400999546051025, alpha: 1))
@@ -66,6 +62,8 @@ struct AddItemView: View {
                     HStack{
                         Button {
                             //action
+                            self.showHomeView = true
+
                         } label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 20)
@@ -84,7 +82,7 @@ struct AddItemView: View {
                         
                     }.padding()
                     
-                    Text("Checkout").font(.system(size: 16, weight: .bold, design: .rounded)).foregroundColor(Color(#colorLiteral(red: 0.13, green: 0.16, blue: 0.18, alpha: 1)))
+                    Text("Add Item").font(.system(size: 16, weight: .bold, design: .rounded)).foregroundColor(Color(#colorLiteral(red: 0.13, green: 0.16, blue: 0.18, alpha: 1)))
 
                     
                 }
@@ -286,6 +284,7 @@ struct AddItemView: View {
                         Button(action: {
                             self.showPopUp = false
                             self.showHomeView = true
+                            vm.image = nil
                         }, label: {
                             ZStack{
                                 

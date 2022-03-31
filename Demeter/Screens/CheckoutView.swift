@@ -298,6 +298,7 @@ struct CheckoutView: View {
                         Spacer()
                         Button(action: {
                             self.showPopUp = false
+                            self.showHomeView = true
                         }, label: {
                             ZStack{
                                 

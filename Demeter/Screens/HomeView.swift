@@ -23,7 +23,7 @@ struct HomeView: View {
     
     //This is not a database..lol
     private var categoriesList = ["All", "Fruits", "Vegetable", "Herbs", "Organic","Inorganic"]
-    private var itemsList = ["corn": ["Corn", "Cereal", "1 mile away", "$2.30"],"pineapple": ["Pineapple", "Fruit", "2 miles away", "$1.20"],"apple": ["Apple", "Fruit", "3 miles away", "$0.50"],"orange": ["Orange", "Fruit", "<1 mile away", "$0.20"],"onion": ["Onion", "Vegetable", "Nearby", "Free"]]
+    private var itemsList = ["corn": ["Corn", "Cereal", "1 mile away", "$0.90"],"pineapple": ["Pineapple", "Fruit", "2 miles away", "$0.60"],"apple": ["Apple", "Fruit", "3 miles away", "$0.30"],"orange": ["Orange", "Fruit", "<1 mile away", "$0.20"],"onion": ["Onion", "Vegetable", "Nearby", "Free"]]
     
     
     let columns = [

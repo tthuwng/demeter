@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ThirdOnboardingView: View {
+    
+    @State private var showHomeView = false
+
     var body: some View {
         ZStack {
             Color(#colorLiteral(red: 0.8842360973358154, green: 0.9916666746139526, blue: 0.9400999546051025, alpha: 1)).ignoresSafeArea()
@@ -104,6 +107,7 @@ struct ThirdOnboardingView: View {
                     
                     Button {
                         //action
+                        self.showHomeView = true
                     } label: {
                         ZStack{
                             //Rectangle 8
@@ -128,7 +132,11 @@ struct ThirdOnboardingView: View {
                 
                 
             }
-            
+            if $showHomeView.wrappedValue{
+                    withAnimation{
+                      HomeView()
+                    }.transition(AnyTransition.move(edge: .trailing).combined(with: .opacity)).animation(Animation.easeInOut(duration: 0.5))
+                }
             
         }
     }

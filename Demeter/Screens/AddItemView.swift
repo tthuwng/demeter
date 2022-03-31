@@ -17,6 +17,7 @@ struct AddItemView: View {
     @State private var price: String = String()
     
     @State private var showPopUp = false
+    @State private var showHomeView = false
 
 
 
@@ -263,6 +264,15 @@ struct AddItemView: View {
                 
             }
             
+            
+            if $showHomeView.wrappedValue{
+                
+                withAnimation{
+                    HomeView()
+                }.transition(AnyTransition.move(edge: .bottom).combined(with: .opacity)).animation(Animation.easeInOut(duration: 0.5))
+                
+            }
+           
             if $showPopUp.wrappedValue {
                 ZStack {
                     
@@ -275,6 +285,7 @@ struct AddItemView: View {
                         Spacer()
                         Button(action: {
                             self.showPopUp = false
+                            self.showHomeView = true
                         }, label: {
                             ZStack{
                                 

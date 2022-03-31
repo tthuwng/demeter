@@ -13,6 +13,12 @@ struct LoginView: View {
     @State private var passwordField: String = String()
     @State private var usernameField: String = String()
     
+    @State private var showOnboardingView = false
+    @State private var showProgressView = false
+
+
+    
+    
     @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
     
     var body: some View {
@@ -58,10 +64,12 @@ struct LoginView: View {
                     Text("Demeter").font(.system(size: 36, weight: .regular, design: .rounded)).foregroundColor(Color(#colorLiteral(red: 0.96, green: 0.96, blue: 0.96, alpha: 1))).offset(x: 0, y: -10)
                 }
                 
-                
+              
                 HStack{
                     Button {
-                        //action
+                    
+                        
+                        
                     } label: {
                         Text("Login").font(.system(size: 18, weight: .semibold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                     }
@@ -101,7 +109,14 @@ struct LoginView: View {
                 
                 
                 Button {
-                    //action
+                    self.showProgressView = true
+                    
+                    //Delay (For demo purpse)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                        self.showProgressView = false
+                        self.showOnboardingView = true
+                        
+                    }
                 } label: {
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
@@ -113,7 +128,27 @@ struct LoginView: View {
                 }
             }.frame(width: 350, height: 100, alignment: .center)
             
+                
+        
+            
+        if $showProgressView.wrappedValue{
+            ZStack{
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.50)))
+                    .frame(width: 70, height: 70)
+                
+                
+                ProgressView().progressViewStyle(CircularProgressViewStyle(tint: Color.green)).scaleEffect(1.5, anchor: .center).offset(y:-5)
+            }.offset(y: 30)
         }
+            
+        if $showOnboardingView.wrappedValue{
+                withAnimation{
+                    SecondOnboardingView()
+                }.transition(AnyTransition.move(edge: .trailing).combined(with: .opacity)).animation(Animation.easeInOut(duration: 0.5))
+            }
+        }
+       
     }
 }
 

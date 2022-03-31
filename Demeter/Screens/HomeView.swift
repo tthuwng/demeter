@@ -13,12 +13,17 @@ struct HomeView: View {
     @State private var welcomeText: String = "Enjoy 20% discount  \nevery Friday"
     @State private var showPopUp = false
     @State private var cartSize: Int = 0
-
+    
+    @State private var showCartView = false
+    @State private var showAdditemView = false
+    @State private var showScanView = false
+    @State private var showItemView = false
+    
     
     
     //This is not a database..lol
     private var categoriesList = ["All", "Fruits", "Vegetable", "Herbs", "Organic","Inorganic"]
-    private var itemsList = ["corn": ["Corn", "Cereal", "1 mile away", "$2.30"],"pineapple": ["Pineapple", "Fruit", "2 miles away", "$1.20"],"apple": ["Apple", "Fruit", "3 miles away", "$0.50"],"orange": ["Orange", "Fruit", "<1 mile away", "$0.20"]]
+    private var itemsList = ["corn": ["Corn", "Cereal", "1 mile away", "$2.30"],"pineapple": ["Pineapple", "Fruit", "2 miles away", "$1.20"],"apple": ["Apple", "Fruit", "3 miles away", "$0.50"],"orange": ["Orange", "Fruit", "<1 mile away", "$0.20"],"onion": ["Onion", "Vegetable", "Nearby", "Free"]]
     
     
     let columns = [
@@ -126,7 +131,7 @@ struct HomeView: View {
                             GeometryReader { geometry in
                                 
                                 Button {
-                                    //action
+                                  
                                 } label: {
                                     ZStack{
                                         RoundedRectangle(cornerRadius: 10)
@@ -147,15 +152,12 @@ struct HomeView: View {
                 
                 
                 
-                ScrollView{
+                ScrollView(showsIndicators: false){
                     LazyVGrid(columns: columns, spacing: 20) {
                         ForEach(Array(itemsList.keys), id: \.self) { item in
                             ZStack {
-                                
-                                
-                                
                                 Button {
-                                    //action
+                                    self.showItemView = true
                                 } label: {
                                     ZStack {
                                         Image(item)
@@ -242,7 +244,7 @@ struct HomeView: View {
                     HStack(spacing: 60){
                         
                         Button {
-                            //action
+                            self.showScanView = true
                         } label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 20)
@@ -260,7 +262,7 @@ struct HomeView: View {
                         }
                         
                         Button {
-                            //action
+                            self.showAdditemView = true
                         } label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 20)
@@ -278,7 +280,7 @@ struct HomeView: View {
                         }
                         
                         Button {
-                            //action
+                            self.showCartView = true
                         } label: {
                             ZStack{
                                 
@@ -305,6 +307,7 @@ struct HomeView: View {
                 
             }
             
+            
             if $showPopUp.wrappedValue {
                 ZStack {
                     
@@ -317,6 +320,7 @@ struct HomeView: View {
                         Spacer()
                         Button(action: {
                             self.showPopUp = false
+    
                         }, label: {
                             ZStack{
                                 
@@ -338,9 +342,32 @@ struct HomeView: View {
                 .cornerRadius(20).shadow(radius: 20).offset(y: 50)
             }
             
+
+            if $showCartView.wrappedValue{
+                withAnimation{
+                    CartView()
+                }.transition(AnyTransition.move(edge: .trailing).combined(with: .opacity)).animation(Animation.easeInOut(duration: 0.5))
+            }
+            
+            else if $showScanView.wrappedValue{
+                withAnimation{
+                    CroptypeScanView()
+                }.transition(AnyTransition.move(edge: .trailing).combined(with: .opacity)).animation(Animation.easeInOut(duration: 0.5))
+            }
+
+            else if $showAdditemView.wrappedValue{
+                withAnimation{
+                    AddItemView()
+                }.transition(AnyTransition.move(edge: .trailing).combined(with: .opacity)).animation(Animation.easeInOut(duration: 0.5))
+            }
+            
+            else if $showItemView.wrappedValue{
+                withAnimation{
+                    ItemView()
+                }.transition(AnyTransition.move(edge: .trailing).combined(with: .opacity)).animation(Animation.easeInOut(duration: 0.5))
+            }
+            
         }.ignoresSafeArea(.all)
-        
-        
     }
 }
 

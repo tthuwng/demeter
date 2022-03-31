@@ -10,6 +10,9 @@ import SwiftUI
 
 struct ScanView: View {
     @EnvironmentObject var vm: ViewModel
+    @State private var showResultsView = false
+    
+    
     
     var body: some View {
         ZStack{
@@ -124,12 +127,11 @@ struct ScanView: View {
                             .strokeBorder(Color(#colorLiteral(red: 0.16470588743686676, green: 0.615686297416687, blue: 0.5607843399047852, alpha: 1)), lineWidth: 5)
                         
                         
-                        
                     }
                     
                     else {
                         Image("plantpot").resizable().frame(width: 100, height: 100, alignment: .center)
-
+                        
                         GifImage("scanning").frame(width: 350, height: 340, alignment: .center).cornerRadius(17).opacity(0.2)
                     }
                     
@@ -144,6 +146,8 @@ struct ScanView: View {
                     Button {
                         vm.source = .camera
                         vm.showPhotoPicker()
+                        
+                       
                         
                         
                     } label: {
@@ -167,6 +171,12 @@ struct ScanView: View {
                         vm.source = .library
                         vm.showPhotoPicker()
                         
+                        //Delay (For demo purpse)
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 6.0) {
+                            self.showResultsView = true
+ 
+                        }
+                        
                     } label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 20)
@@ -177,8 +187,8 @@ struct ScanView: View {
                                 .fill(Color(#colorLiteral(red: 0.95686274766922, green: 0.6352941393852234, blue: 0.3803921639919281, alpha: 1)))
                                 .frame(width: 81, height: 55).offset()
                             
-                          
-                                          
+                            
+                            
                             Image(systemName: "photo.artframe").font(.system(size: 25.0,weight: .bold)).foregroundColor(.white)
                             
                             
@@ -252,9 +262,17 @@ struct ScanView: View {
                 }.padding(.top,90)
                 
                 Spacer()
+                
             }
             
+            if $showResultsView.wrappedValue{
+                withAnimation{
+                    ResultsView()
+                }.transition(AnyTransition.move(edge: .trailing).combined(with: .opacity)).animation(Animation.easeInOut(duration: 0.5))
+                
+            }
             
+
             
         }.ignoresSafeArea().frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
     }

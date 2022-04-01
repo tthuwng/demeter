@@ -52,7 +52,7 @@ Please make sure you have Xcode installed. Version 13 was used for this project.
 This is an example of how to list things you need to use the software and how to install them.
 
 - Xcode >12
-- Iphone 13 Pro Simulator with IOS 15
+- IPhone 13 Pro Simulator with IOS 15
 
 ### Installation
 
@@ -86,9 +86,12 @@ Contributions to this project will open soon after the Competition (Sepetember, 
 <!-- CONTACT -->
 ## Contact
 
-Stephane Le - ``stephaniele20@augustana.edu``
+Stephane Le - ``stephaniele20@augustana.edu`` 
+
 Hung Tran - ``hungtran20@augustana.edu ``
+
 Paul Addai - ``pauladdai19@augustana.edu``
+
 Rijan Kafle - ``rijankafle20@augustana.edu ``
 
 

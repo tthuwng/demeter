@@ -49,10 +49,10 @@ Please make sure you have Xcode installed. Version 13 was used for this project.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+This is an example of how to list things you need to use the software.
 
 - Xcode >12
-- IPhone 13 Pro Simulator with IOS 15
+- IPhone 13 Pro Simulator with IOS 15 (preferred)
 
 ### Installation
 
@@ -68,6 +68,7 @@ Download the project and open Demeter.xcodeproj
 
 - [x] Add Demo frontend
 - [x] Google Solutions Submissions
+- [x] Train ML model using Google Colab
 - [ ] Deploy ML model to Cloud Run
 - [ ] Set up backend Firebase Firestore, Storage
 - [ ] Publish on App Store
